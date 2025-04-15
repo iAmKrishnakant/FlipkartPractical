@@ -123,7 +123,12 @@ public class TestCases extends BaseClass {
 		case "correct number" :
 			lg.enterMobilenumber(mobileNumber);
 			lgOtp = lg.clickOnReqOTP();
-			lgOtp.enterCorrectOtpForLogin();
+			try {
+				lgOtp.enterCorrectOtpForLogin();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			homeli = new Home_Logged_in();
 			boolean title = homeli.verifyTitle(homePageTitle);
 
@@ -163,7 +168,12 @@ public class TestCases extends BaseClass {
 		lg = hp.clickOnLogin();
 		lg.enterMobilenumber(mobileNumber);
 		lgOtp = lg.clickOnReqOTP();
-		lgOtp.enterCorrectOtpForLogin();
+		try {
+			lgOtp.enterCorrectOtpForLogin();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		homeli = new Home_Logged_in();
 		boolean title = homeli.verifyTitle(homePageTitle);
 		Assert.assertTrue(title);

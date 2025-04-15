@@ -59,8 +59,8 @@ public class VerifyLogInOTP extends BaseClass {
 		
 	}
 	
-	public void enterCorrectOtpForLogin() {
-		new Scanner(System.in).nextLine();
+	public void enterCorrectOtpForLogin() throws InterruptedException {
+		Thread.sleep(30000);
 	}
 	
 	public boolean verifyInvalidOtpError(String expectedMsg) {
